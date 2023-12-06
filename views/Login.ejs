@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="bg"></div>
+
+
+  <form>
+  <center><img src="assets/img/logo.jpg" alt="MGDC" height="150"/></center>
+	<center><h1 style="color: aliceblue;">إدارة الخدمات المساعدة</h1></center>
+  <div class="form-field">
+    <input id="user" type="text" placeholder="اسم المستخدم" required/>
+  </div>
+  
+  <div class="form-field">
+    <input id="pass" type="password" placeholder="كلمة المرور" required/>
+</div>
+  
+  <div class="form-field">
+    <button type="button" class="btn" onclick="login()"><b style="font-size: x-large;">دخـــول</b></button>
+  </div>
+  
+  <center>
+	<div id='output' style="font-weight: 900; font-size: larger; background-color: red; color: aliceblue; margin: 0px 0px 15px 0px; padding-left: 10px;"></div>
+  </center>
+  
+
+</form>
+<!-- partial -->
+  
+</body>
+</html>
+
+<script>
+  
+                  function login() {
+					if(document.getElementById("user").value != null && document.getElementById("pass").value != null)
+					{
+						var obj={
+                              bodydata: "true",
+							  user: document.getElementById("user").value,
+							  pass: document.getElementById("pass").value
+                           };
+                     
+                        fetch('/home',{
+                           method:'POST',
+                           headers:{"Content-type":"application/json"},
+                           body:JSON.stringify(obj)
+                           }).then((r)=>r.json()).then(
+                              function (response){ 
+                                 if(response=="ok"){
+									window.open("/home", '_self').focus();
+								 }else{
+									document.getElementById("output").innerHTML=response
+								 }
+                           });
+					}
+                  }
+
+</script>
