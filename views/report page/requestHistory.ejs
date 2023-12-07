@@ -1,3 +1,14 @@
+<style>
+    @media print{
+    @page{
+        size: Portrait;
+    }    
+    html
+    {
+        zoom: 80%;
+    }
+  </style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +33,10 @@
                 <input type="date" id="date" style="outline:none;padding: 0.4rem;border-radius: 5px; border: none; box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;">
                 <label for="date2"><strong> ➡️ </strong></label>
                 <input type="date" id="date2" style="outline:none;padding: 0.4rem;border-radius: 5px; border: none; box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;">
-                <label for="id"><strong> رقم الطلب : </strong></label>
+                <label for="id"><strong> رقم الإذن : </strong></label>
                 <input id="id_filter" style=" width: 80px; outline:none;padding: 0.4rem;border-radius: 5px; border: none; box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem;">
                 
-                <button id="filter" style=" width: 200px;  outline:none;padding: 0.4rem;border-radius: 5px; border: none; box-shadow: 0 0 10px rgb(202, 202, 202);margin: 0.8rem; background-color: brown; color: aliceblue;" onclick="filter()"><strong>فلتر</strong> </button>
+                <button class="filterButton" id="filter" onclick="filter()"><strong>فلتر</strong> </button>
 
                <div>
                    <table class="table table-bordered">

@@ -148,6 +148,7 @@ body{
                 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
                 background-color: #3e8e41;
               }
+            
              
               .printButton{
                 background-color: #acacac;
@@ -163,7 +164,22 @@ body{
               .printButton:hover{
                 cursor: pointer; /* Pointer/hand icon */
               }
-
+            .filterButton{
+                cursor: pointer; /* Pointer/hand icon */
+                width: 200px;
+                font-size: larger; 
+                outline:none; 
+                padding: 0.4rem; 
+                border-radius: 5px; 
+                border: none; 
+                margin: 0.8rem; 
+                background-color: brown; 
+                color:azure
+            }
+            .filterButton:hover{
+              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+              background-color: #3e8e41;
+            }
 
 
             #div1 {
@@ -194,3 +210,4 @@ body{
             overflow: auto;
             background-color: #ffffff;
           }
+          

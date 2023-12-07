@@ -1,3 +1,13 @@
+<style>
+    @media print{
+    @page{
+        size: Portrait;
+    }    
+    html
+    {
+        zoom: 80%;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +80,7 @@
 
    <script>
     var dt = new Date();
-    document.getElementById('date-time').innerHTML=dt;
+    document.getElementById('date-time').innerHTML= document.getElementById('date-time').innerHTML + dt;
     data= <%- JSON.stringify(requests) %>;
     console.log(data);
     var table = document.getElementById("reportData");
